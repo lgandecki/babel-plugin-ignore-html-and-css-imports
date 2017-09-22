@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-ignore-html-and-css-imports",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ignore html and css imports in your code. Useful for testing meteor without it's context",
   "main": "lib/index.js",
   "scripts": {
