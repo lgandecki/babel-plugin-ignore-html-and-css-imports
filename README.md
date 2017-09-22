@@ -42,3 +42,6 @@ require("babel-core").transform("code", {
   plugins: ["transform-ignore-html-and-css-imports"]
 });
 ```
+
+
+Initially based on yeiniel/babel-plugin-transform-html-import-to-string which turned out still not to work properly in Meteor - and since we didn't need the string at all, we've decided to change it a bit.
