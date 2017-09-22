@@ -11,17 +11,8 @@ export default function ({ types: t }) {
             ImportDeclaration: {
                 exit: function(path, state) {
                     const node = path.node;
-
-                    if (endsWith(node.source.value, '.html')) {
-                        const dir = p.dirname(p.resolve(state.file.opts.filename));
-                        const absolutePath = p.resolve(dir, node.source.value);
-
-                        const html = fs.readFileSync(absolutePath, "utf8");
-
-                        path.replaceWith(t.variableDeclaration("var", [
-                            t.variableDeclarator(
-                                t.identifier(node.specifiers[0].local.name),
-                                t.stringLiteral(html))]));
+                    if (endsWith(node.source.value, '.html') || endsWith(node.source.value, '.scss') || endsWith(node.source.value, '.css') ) {
+                        path.remove()
                     }
                 }
             }

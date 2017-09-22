@@ -1,32 +1,20 @@
-# babel-plugin-transform-html-import-to-string
-
+# Ignore html and css imports in your code. Useful for testing meteor without it's context
 Turn HTML imports into strings.
 
 ## Example
-
-Given the following _example.html_.
-
-```html
-<h1>Hello</h1>
-```
-
-#### in
 
 ```js
 import html from './example.html';
 ```
 
 #### out
-
 ```js
-var html = '<h1>Hello</h1>';
 ```
-
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-transform-html-import-to-string
+$ npm install --save-dev babel-plugin-ignore-html-and-css-imports
 ```
 
 ## Usage
@@ -37,20 +25,20 @@ $ npm install babel-plugin-transform-html-import-to-string
 
 ```json
 {
-  "plugins": ["transform-html-import-to-string"]
+  "plugins": ["transform-ignore-html-and-css-imports"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins transform-html-import-to-string script.js
+$ babel --plugins transform-ignore-html-and-css-imports script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["transform-html-import-to-string"]
+  plugins: ["transform-ignore-html-and-css-imports"]
 });
 ```
