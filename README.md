@@ -25,14 +25,14 @@ $ npm install --save-dev babel-plugin-ignore-html-and-css-imports
 
 ```json
 {
-  "plugins": ["transform-ignore-html-and-css-imports"]
+  "plugins": ["ignore-html-and-css-imports"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins transform-ignore-html-and-css-imports script.js
+$ babel --plugins ignore-html-and-css-imports script.js
 ```
 
 ### Via Node API
