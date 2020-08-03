@@ -11,7 +11,8 @@ export default function ({ types: t }) {
             ImportDeclaration: {
                 exit: function(path, state) {
                     const node = path.node;
-                    if (endsWith(node.source.value, '.html') || endsWith(node.source.value, '.scss') || endsWith(node.source.value, '.css') ) {
+                    const fileTypes = ['.html', '.scss', '.css', '.png', '.jpg', '.gif', '.tif']
+                    if (fileTypes.some(_ => endsWith(node.source.value, _))) {
                         path.remove()
                     }
                 }
