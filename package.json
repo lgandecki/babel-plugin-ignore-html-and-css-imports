@@ -1,14 +1,15 @@
 {
   "name": "babel-plugin-ignore-html-and-css-imports",
-  "version": "0.0.2",
+  "version": "0.0.0-development",
   "description": "Ignore html and css imports in your code. Useful for testing meteor without it's context",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lgandecki/babel-plugin-ignore-html-and-css-imports.git"
+    "url": "https://github.com/lgandecki/babel-plugin-ignore-html-and-css-imports.git"
   },
   "keywords": [
     "babel-plugin",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/lgandecki/babel-plugin-ignore-html-and-css-imports#readme",
   "devDependencies": {
     "babel-plugin-tester": "^9.2.0",
-    "jest": "^26.2.2"
+    "jest": "^26.2.2",
+    "semantic-release": "^17.1.1"
   }
 }
