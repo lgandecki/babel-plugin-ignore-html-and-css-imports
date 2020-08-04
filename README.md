@@ -1,5 +1,4 @@
 # Ignore html and css imports in your code. Useful for testing meteor without it's context
-Turn HTML imports into strings.
 
 ## Example
 
@@ -43,5 +42,21 @@ require("babel-core").transform("code", {
 });
 ```
 
+### Options
+
+You can configure what extensions to remove by adding an optional `removeExtensions` option.
+
+```
+{
+  "plugins": [
+    [
+      "ignore-html-and-css-imports",
+      {
+        "removeExtensions": [".png"]
+      }
+    ]
+  ]
+}
+```
 
 Initially based on yeiniel/babel-plugin-transform-html-import-to-string which turned out still not to work properly in Meteor - and since we didn't need the string at all, we've decided to change it a bit.
