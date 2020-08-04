@@ -46,7 +46,7 @@ require("babel-core").transform("code", {
 
 You can configure what extensions to remove by adding an optional `removeExtensions` option.
 
-```
+```json
 {
   "plugins": [
     [
